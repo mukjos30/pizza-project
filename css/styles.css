@@ -1,0 +1,75 @@
+.head{
+    background-image:url( "http://www.famouspizzaexpress.com/images/pizza35.jpg");
+      text-align:center;
+ background-size:cover;
+ height: 600px;
+ 
+  }
+  .header{
+    display:flex;
+    flex-direction:row ;
+    justify-content:space-around;
+  }
+  h1{
+    height:10px;
+    color:black;
+     top:10%; 
+     left:30%;
+    padding:200px;
+     font-size:40px;
+     font-family:sans-serif;
+    text-align:center;
+  }  
+  /* .overlay{
+    background-color:rgba(102,0,51,0.2);
+    z-index:5; */
+  
+  .small,.medium,.large{
+    box-shadow: 0 4px 7px 0 brown;
+     width:300px;
+     margin: top;
+     text-align: center;
+     font-family:none;
+  /* }
+  .services{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around; */
+  }
+  /* .small:hover,.medium:hover,.large:hover{
+    color:brown; */
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  h2,h3{
+    justify-content:center;
+         display:flex;
+         text-align:center;
+      }nav a {
+        display:flex;
+      flex-direction:row;
+   justify-content:space-around;
+     
+   color: white;
+   background-size:cover;
+   margin:10;
+   text-align:center;
+   padding:14px 16px;
+   text-decoration:none;
+   float:right;
+    
+   }
+   nav a:hover{
+      background-color:brown;
+   }
+   /* .small{
+    position:absolute;
+    color: black;
+    padding-left: 80px;
+    padding-top: 80px; */
+  
+  /* #smal1{
+    position:relative;  */
+  
