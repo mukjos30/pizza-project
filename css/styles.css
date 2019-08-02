@@ -20,28 +20,35 @@
      font-family:sans-serif;
     text-align:center;
   }  
-  /* .overlay{
-    background-color:rgba(102,0,51,0.2);
-    z-index:5; */
-  
-  .small,.medium,.large{
-    box-shadow: 0 4px 7px 0 brown;
+  .overlay{ 
+   background-color:rgba(102,0,51,0.2);
+   z-index:1; 
+  }
+   
+  #small,#medium,#large{
+    box-shadow: brown;
      width:300px;
      margin: top;
      text-align: center;
-     font-family:none;
-  /* }
+     padding-top: 20px;
+ 
+   }
+   .select{
+     margin-top: 50px;
+    margin-left: 50px;
+   }
   .services{
     display:flex;
     flex-direction:row;
-    justify-content:space-around; */
+    justify-content:space-around; 
   }
-  /* .small:hover,.medium:hover,.large:hover{
-    color:brown; */
+   #small:hover,#medium:hover,#large:hover{
+    color:brown;
+   }
   
   .price {
-    color: grey;
-    font-size: 22px;
+    color:brown;
+    font-size: 25px;
   }
   h2,h3{
     justify-content:center;
@@ -64,12 +71,17 @@
    nav a:hover{
       background-color:brown;
    }
-   /* .small{
-    position:absolute;
-    color: black;
-    padding-left: 80px;
-    padding-top: 80px; */
-  
-  /* #smal1{
-    position:relative;  */
+   .button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+    
+    
   
