@@ -1,10 +1,10 @@
-.row{
+ .row{
     margin-left:300px;
   margin-top: -100px;
-}
-.price,.crust,.toppings{
+} 
+.price,.crust,.toppings{ 
     width:700px;
-
+margin-top: 100px;
 
 
 }
@@ -21,13 +21,23 @@
  .container-fluid{
      background-image:url( "http://palermospizzafl.com/jsimages/Pizza1.jpg");
      background-size:cover;
-     height: 1000px;
+     height: 1000px; 
      
  }
- .overlay{ 
-    background-color:rgba(102,0,51,0.2);
-    z-index:1; 
-   }
-   /* .column-md-6{
-       width: 700px;
-   } */
+ .pick1{
+    /* display:flex;
+    flex-direction:row; */
+    /* justify-content:space-around;  */
+    margin-top: -5px;
+  }
+  .pick2{
+      margin-left: 400px;
+      margin-top: -30px;
+  }
+  .form{
+      
+      width:500px;
+      margin-top: -100px;
+      margin-left: 150px;
+  }
+   
