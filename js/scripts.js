@@ -624,8 +624,10 @@ function totalprice(size, crust, top) {
     }
     totalPrice=sprice+cprize+tprice;
     return  totalPrice;
+   
 }
-console.log(totalprice("small","grilled","Sausage, caramelized onions, and fennel"))
+alert (totalprice("small","grilled","Sausage, caramelized onions, and fennel"))
+
 
 
 
