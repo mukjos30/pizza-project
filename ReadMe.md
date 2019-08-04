@@ -1,13 +1,11 @@
-## Delani-Studio Project
-
-### My project help the user  to know us 
+## pizza-Project
 
 ## Developer
 
 Josee Mukandayisenga
 
 ## Description of a Project
-my project  is for helping people to know us and to contact us in case they need help from us.
+my project  is for helping those who need pizza in my pizzeria corner
 ## Contact us on
 + Email:mukjos30@gmail.com
 + phone:0788978192
