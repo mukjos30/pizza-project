@@ -2,7 +2,10 @@ function order(size, crust, topping) {
     this.size =size;
     this.crust =crust;
     this.topping =topping;
+    this.total=total;
  }
+ order.prototype.getTotal=function(){return totalPrice
+}
 var s = ["small", "Medium", "large"];
 var c = ["New england style", "grilled", "deep dish", "stuffed", "cast iron", "flat bread"];
 var t = ["Sausage, caramelized onions, and fennel", "Pepperoni, tomatoes, mushrooms, and onion", "Pepperoni, sausage, green pepper, onion, and mushroom", "Grilled chicken, avocado, and cherry tomatoes", "Roasted Brussels sprouts and bacon or pancetta", "Sardines, red onions, and black olives", "Pesto with white beans, tomato, arugula, and Parmesan cheese", "Goat cheese with arugula and red onion", "Fried eggplant slices and black olives"]
@@ -641,22 +644,22 @@ alert (totalprice("small","grilled","Sausage, caramelized onions, and fennel"))
 
 
 
-//user interface logic
+
 $(document).ready(function () {
-    $("#orderm").click(function () {
-        $(".pizzaf").append('<div class="form-group">' +
-            '<label for="size">Choose any size:</label>' +
-            '<select class="form-control" id="select1">' +
+    $("#order").click(function () {
+        $(".form").append('<div class="form-group">' +
+            '<label for="choose">Choose your favorite size:</label>' +
+            '<select class="form-control" id="control">' +
             '<option>Small</option>' +
             '<option>Medium</option>' +
             '<option>Large</option>' +
             '</select>' +
             '</div>' +
             '<div class="form-group">' +
-            '<label for="sel2">choose the crust:</label>' +
-            '<select class="form-control" id="select2">' +
-            '<option>New England Greek Style</option>' +
+            '<label for="crust">choose your favorite crust:</label>' +
+            '<select class="form-control" id="crust1">' +
             '<option>Grilled</option>' +
+            '<option>New England Greek Style</option>' +
             '<option>Deep Dish</option>' +
             '<option>Stuffed</option>' +
             '<option>Cast Iron</option>' +
@@ -664,8 +667,8 @@ $(document).ready(function () {
             '</select>' +
             '</div>' +
             '<div class="form-group">' +
-            '<label for="sel3">choose the topping:</label>' +
-            '<select class="form-control" id="select3">' +
+            '<label for="topping">choose your favorite  topping:</label>' +
+            '<select class="form-control" id="topping1">' +
             '<option>Sausage, caramelized onions, and fennel</option>' +
             '<option>Pepperoni, tomatoes, mushrooms, and onion</option>' +
             '<option>Pepperoni, sausage, green pepper, onion, and mushroom</option>' +
@@ -679,11 +682,11 @@ $(document).ready(function () {
             '</select>' +
             '</div>')
     })
-    $("#give").click(function () {
-        $("#number").toggle();
+    $("#del").click(function () {
+        $("#del2").toggle();
     })
-    $("#pick").click(function () {
-        $("#minute").toggle();
+    $("#take").click(function () {
+        $("#pick").toggle();
     })
     $("#check").click(function () {
         var inputsize = $("#select1").val();
