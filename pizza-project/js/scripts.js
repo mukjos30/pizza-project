@@ -687,26 +687,12 @@ $(document).ready(function () {
                     tprice = 800;
                 }
             }
-    
-    
         }
         totalPrice=sprice+cprice+tprice;
         return  totalPrice;
-      
     }
-    // alert (totalPrice);
-        // alert (totalprice(["small", "Medium", "large"],
-        // ["New england style", "grilled", "deep dish", "stuffed", "cast iron", "flat bread"],
-        // ["Sausage, caramelized onions, and fennel", "Pepperoni, tomatoes, mushrooms, and onion", "Pepperoni, sausage, green pepper, onion, and mushroom", "Grilled chicken, avocado, and cherry tomatoes", "Roasted Brussels sprouts and bacon or pancetta", "Sardines, red onions, and black olives", "Pesto with white beans, tomato, arugula, and Parmesan cheese", "Goat cheese with arugula and red onion", "Fried eggplant slices and black olives"]
-        // ))
-        alert (totalprice("small","grilled","Sausage, caramelized onions, and fennel"))
+    alert (totalprice("small","grilled","Sausage, caramelized onions, and fennel"))
 
     })
-    //alert (totalprice("small","grilled","Sausage, caramelized onions, and fennel"))
-    
-    
-    
-    
-    
-})
+    })
 
