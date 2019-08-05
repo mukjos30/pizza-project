@@ -30,6 +30,7 @@
                         <div class="form-group">
                             <label for="choose">Choose your favorite  size:</label>
                             <select class="form-control" id="control" width=30>
+                                <option value=""></option>
                                 <option>Small 500frws</option>
                                 <option>Medium 1000frws</option>
                                 <option>Large 1500</option>
@@ -38,6 +39,7 @@
                         <div class="form-group">
                             <label for="crust">choose  your favorite crust:</label>
                             <select class="form-control" id="crust1">
+                                <option value=""></option>
                                 <option>New Greek Style</option>
                                 <option>Grilled 200 frws</option>
                                 <option>Deep Dish 300frs</option>
@@ -47,8 +49,10 @@
                             </select>
                         </div>
                         <div class="form-group">
+                                 
                             <label for="topping">choose your favorite topping:</label>
                             <select class="form-control" id="topping1">
+                                    <option value=""></option>
                                 <option>Sausage, caramelized onions, and fennel</option>
                                 <option>Pepperoni, tomatoes, mushrooms, and onion</option>
                                 <option>Pepperoni, sausage, green pepper, onion, and mushroom</option>
@@ -63,14 +67,17 @@
                     </div>
                     </div>
              <div class="more">
+                    <button type="button"  id="TAKE">TAKE</button>
                     <button type="button" class="btn btn-success" id="order">Order more</button><br>
+                   
+                    <p> total price<span id="span"> </span></p>
                     <div class="form-group">
                         <label for="delivery">
                             <h4>delivery options:</h4>
                         </label><br>
                         
                         <button type="button"   id="del">Address</button>
-                        <!-- <button type="button"  id="TAKE">TAKE</button> -->
+                        
                     </div>
          <div class="inner">
                     <div class="del1" id="del2">
@@ -98,7 +105,7 @@
                     </div>
                 </div>
             </div>
-                    <!-- <button type="button" class="btn btn-success" id="">check your order</button> -->
+                    <button type="button" class="btn btn-success" id="check">check your order</button>
                  
                 <div class="column-md-3"></div>
             </div>
@@ -118,4 +125,4 @@
     <script src="js/scripts.js"></script>
 
 </body>
-</html>
+</html> 

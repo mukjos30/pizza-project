@@ -3,6 +3,7 @@ $(document).ready(function () {
         $(".form").append('<div class="form-group">' +
             '<label for="choose">Choose your favorite size:</label>' +
             '<select class="form-control" id="control">' +
+            ' <option value=""></option>'+
             '<option>Small</option>' +
             '<option>Medium</option>' +
             '<option>Large</option>' +
@@ -11,6 +12,7 @@ $(document).ready(function () {
             '<div class="form-group">' +
             '<label for="crust">choose your favorite crust:</label>' +
             '<select class="form-control" id="crust1">' +
+            '<option value=""></option>'+
             '<option>Grilled</option>' +
             '<option>New England Greek Style</option>' +
             '<option>Deep Dish</option>' +
@@ -22,6 +24,7 @@ $(document).ready(function () {
             '<div class="form-group">' +
             '<label for="topping">choose your favorite  topping:</label>' +
             '<select class="form-control" id="topping1">' +
+            '<option value=""></option>'+
             '<option>Sausage, caramelized onions, and fennel</option>' +
             '<option>Pepperoni, tomatoes, mushrooms, and onion</option>' +
             '<option>Pepperoni, sausage, green pepper, onion, and mushroom</option>' +
@@ -38,10 +41,11 @@ $(document).ready(function () {
     $("#del").click(function () {
         $("#del2").toggle();
     })
+   
     $("#take").click(function () {
         $("#pick").toggle();
     })
-    $("#check").click(function () {
+    $("#take").click(function () {
         var inputsize = $("#control").val();
         console.log(inputsize);
         var inputcrust = $("#crust1").val();
@@ -58,7 +62,7 @@ $(document).ready(function () {
     $("#submit").click(function () {
         alert("Thank you!!!")
     })
-    function order(size, crust, topping) {
+    function order(size, crust, topping,total) {
         this.size =size;
         this.crust =crust;
         this.topping =topping;
@@ -66,17 +70,18 @@ $(document).ready(function () {
      }
      order.prototype.getTotal=function(){return totalPrice
     }
+    $("#TAKE").click(function(){
     var s = ["small", "Medium", "large"];
     var c = ["New england style", "grilled", "deep dish", "stuffed", "cast iron", "flat bread"];
     var t = ["Sausage, caramelized onions, and fennel", "Pepperoni, tomatoes, mushrooms, and onion", "Pepperoni, sausage, green pepper, onion, and mushroom", "Grilled chicken, avocado, and cherry tomatoes", "Roasted Brussels sprouts and bacon or pancetta", "Sardines, red onions, and black olives", "Pesto with white beans, tomato, arugula, and Parmesan cheese", "Goat cheese with arugula and red onion", "Fried eggplant slices and black olives"]
     
     
-    var sprice, cprize, tprice,totalPrice;
+    var sprice, cprice, tprice,totalPrice;
     function totalprice(size, crust, top) {
         if (size === s[0]) {
             sprice = 1500;
             if (crust === c[0]) {
-                cprize = 300
+                cprice = 300
                 if (top === t[0]) {
                     tprice = 1000
                 }
@@ -110,7 +115,7 @@ $(document).ready(function () {
     
             }
             else if (crust === c[1]) {
-                cprize = 300;
+                cprice = 300;
                 if (top === t[0]) {
                     tprice = 500
                 }
@@ -143,7 +148,7 @@ $(document).ready(function () {
                 }
             }
             else if (crust === c[2]) {
-                cprize = 400;
+                cprice = 400;
                 if (top === t[0]) {
                     tprice = 500
                 }
@@ -176,7 +181,7 @@ $(document).ready(function () {
                 }
             }
             else if (crust === c[3]) {
-                cprize = 300;
+                cprice = 300;
                 if (top === t[0]) {
                     tprice = 500
                 }
@@ -209,7 +214,7 @@ $(document).ready(function () {
                 }
             }
             else if (crust === c[4]) {
-                cprize = 500;
+                cprice = 500;
                 if (top === t[0]) {
                     tprice = 500
                 }
@@ -242,7 +247,7 @@ $(document).ready(function () {
                 }
             }
             else if (crust === c[5]) {
-                cprize = 300;
+                cprice = 300;
                 if (top === t[0]) {
                     tprice = 500
                 }
@@ -280,7 +285,7 @@ $(document).ready(function () {
         if (size === s[1]) {
             sprice = 1500;
             if (crust === c[0]) {
-                cprize = 300
+                cprice = 300
                 if (top === t[0]) {
                     tprice = 500
                 }
@@ -314,7 +319,7 @@ $(document).ready(function () {
     
             }
             else if (crust === c[1]) {
-                cprize = 400;
+                cprice = 400;
                 if (top === t[0]) {
                     tprice = 500
                 }
@@ -446,7 +451,7 @@ $(document).ready(function () {
                 }
             }
             else if (crust === c[5]) {
-                cprize = 300;
+                cprice = 300;
                 if (top === t[0]) {
                     tprice = 500
                 }
@@ -518,7 +523,7 @@ $(document).ready(function () {
     
             }
             else if (crust === c[1]) {
-                cprize = 400;
+                cprice = 400;
                 if (top === t[0]) {
                     tprice = 500
                 }
@@ -584,7 +589,7 @@ $(document).ready(function () {
                 }
             }
             else if (crust === c[3]) {
-                cprize = 300;
+                cprice = 300;
                 if (top === t[0]) {
                     tprice = 500
                 }
@@ -650,7 +655,7 @@ $(document).ready(function () {
                 }
             }
             else if (crust === c[5]) {
-                cprize = 300;
+                cprice = 300;
                 if (top === t[0]) {
                     tprice = 500
                 }
@@ -685,10 +690,19 @@ $(document).ready(function () {
     
     
         }
-        totalPrice=sprice+cprize+tprice;
+        totalPrice=sprice+cprice+tprice;
         return  totalPrice;
+      
     }
-    alert (totalprice("small","grilled","Sausage, caramelized onions, and fennel"))
+    // alert (totalPrice);
+        // alert (totalprice(["small", "Medium", "large"],
+        // ["New england style", "grilled", "deep dish", "stuffed", "cast iron", "flat bread"],
+        // ["Sausage, caramelized onions, and fennel", "Pepperoni, tomatoes, mushrooms, and onion", "Pepperoni, sausage, green pepper, onion, and mushroom", "Grilled chicken, avocado, and cherry tomatoes", "Roasted Brussels sprouts and bacon or pancetta", "Sardines, red onions, and black olives", "Pesto with white beans, tomato, arugula, and Parmesan cheese", "Goat cheese with arugula and red onion", "Fried eggplant slices and black olives"]
+        // ))
+        alert (totalprice("small","grilled","Sausage, caramelized onions, and fennel"))
+
+    })
+    //alert (totalprice("small","grilled","Sausage, caramelized onions, and fennel"))
     
     
     
